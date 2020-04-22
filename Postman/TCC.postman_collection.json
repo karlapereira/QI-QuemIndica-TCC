@@ -1,0 +1,1297 @@
+{
+	"info": {
+		"_postman_id": "8462d3de-b1cb-44f3-8c8b-f064abc899d0",
+		"name": "TCC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "GET - USUARIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/<token>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"<token>"
+							]
+						},
+						"description": "Método que lê um usuário do banco"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIOS (TODOS)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/user/all/<pag>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"all",
+								"<pag>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIOS - CHECK",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/user/check/<email>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"check",
+								"<email>"
+							]
+						},
+						"description": "Checar se um e-mail já existe no banco"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT SOLICIATÇÕES DE AMIZADE RECEBIDAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_friend_solicitations_recieved/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_friend_solicitations_recieved",
+								"<id>"
+							]
+						},
+						"description": "Retorna  o número de solicitações de amizade feitas a um usuário"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT SOLICIATOES AMIZADAS ENVIADAS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_friend_solicitations_sent/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_friend_solicitations_sent",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT NOVOS DEPOIMENTOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_depo_solicitations/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_depo_solicitations",
+								"<id>"
+							]
+						},
+						"description": "Retorna o número de novos depoimentos recebidos por um usuário"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT AMIGOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_friend_number/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_friend_number",
+								"<id>"
+							]
+						},
+						"description": "Retorna o número de amigos de um usuário"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT DEPOIMENTOS RECEBIDOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_depo_number/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_depo_number",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT DEPOIMENTOS ESCRITOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_written_depo_number/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_written_depo_number",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT CONVITES EM GRUPOS RECEBIDOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_group_invitations/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_group_invitations",
+								"<id>"
+							]
+						},
+						"description": "Retorna o número de convites feitos a um usuário"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT GRUPOS QUE PARTICIPA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_group_number/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_group_number",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT GRUPOS CRIADOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_created_group_number/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_created_group_number",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - COUNT GRUPOS PEDIU PARTICIPAÇÃO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/get_asked_group_number/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"get_asked_group_number",
+								"<id>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET -USUARIO - BUSCA USUARIO PELO NOME OU EMAIL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/user/search/<nome_email>/<id>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"search",
+								"<nome_email>",
+								"<id>"
+							]
+						},
+						"description": "RETORNA todos os usuário que contenha nome ou email com a string passada e diferente do id passado ( deve-se passar o id do buscador, para que o mesmo não se retorne)"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - USUARIO - RELACAO ENTRE USUARIOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/users/get_relation/id1/id2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"users",
+								"get_relation",
+								"id1",
+								"id2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST - USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"\",\n    \"email\": \"lucasprgaspar@gmail.com\",\n    \"token\":\"1234\",\n    \"foto\":  \"\",\n    \"profissao\": \"Engenharia da comptação\",\n    \"local\":  \"Inatel\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3003/API/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								""
+							]
+						},
+						"description": "Método para inserir um usuário no banco\nBODY DA REQUEST\n{\n\t\"nome\" =\"\",\n    \"email\" =\"\",\n    \"foto\" = \"\",\n    \"profissao\" = \"\",\n    \"local\"  = \"\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - USUARIO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"\",\n    \"email\": \"\",\n    \"foto\":  \"\",\n    \"profissao\": \"\",\n    \"local\":  \"\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3003/API/user/<id>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"<id>"
+							]
+						},
+						"description": "Atualiza um usuário no banco\n"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - USUARIO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/user/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"user",
+								"<ID>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IS_FRIEND",
+			"description": "",
+			"item": [
+				{
+					"name": "GET - IS_FRIEND (TODOS)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/is_friend/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"is_friend",
+								"<ID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - IS_FRIEND ( dois nós ) ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/is_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"is_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Retorna os dois nós passados,bem como a relação IS_FRIEND entre eles\n"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - IS_FRIEND ( dois nós)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Insere uma relação IS_FRIEND entre dois nós\n"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - IS_FRIEND (TODOS)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/is_friend/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"is_friend",
+								"<ID>"
+							]
+						},
+						"description": "Deleta todas as relações IS_FRIEND do usuário em questão"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - IS_FRIEND (dois nós)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/is_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"is_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Deleta uma IS_FRIEND entre dois nós"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ASKED_AS_FRIEND",
+			"description": "",
+			"item": [
+				{
+					"name": "GET - ASKED_AS_FRIEND ( TODAS)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID>"
+							]
+						},
+						"description": "Retorna todas as relações ASKED_AS_FRIEND que foram feitas a um nó"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - ASKED_AS_FRIEND ( dois nós)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Retorna uma relação ASKED_AS_FRIEND entre dois nós e os nós"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - ASKED_AS_FRIEND",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Insere uma relação ASKED_AS_FRIEND entre dois nós e retorna a relação criada"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - ASKED_AS_FRIEND ",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Transforma uma relação do tipo ASKED_AS_FRIEND em uma relação IS_FRIEND, retornando os nós e a relação IS_FRIEND"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - ASKED_AS_FRIEND",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Deleta uma relação ASKED_AS_FRIEND entre dois nós"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - ASKED_AS_FRIEND",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/asked_as_friend/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"asked_as_friend",
+								"<ID>"
+							]
+						},
+						"description": "Deleta todas as relações ASKED_AS_FRIEND de um usuário"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Depoimento",
+			"description": "",
+			"item": [
+				{
+					"name": "GET - DEPOIMENTOS  - HAS_DEPO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/has_depo/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"has_depo",
+								"<ID>"
+							]
+						},
+						"description": "Retorna todos os depoimentos de um nó"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - DEPOIMENTOS  (dois nós ) - HAS_DEPO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/has_depo/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"has_depo",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Retorna um depoimento específico, bem como seu autor"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - DEPOIMENTOS - WAITING_CONFIRMATION",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/waiting_confirmation/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"waiting_confirmation",
+								"<ID>"
+							]
+						},
+						"description": "Retorna todos os depoimentos pendentes feitos a um usuário e seus autores "
+					},
+					"response": []
+				},
+				{
+					"name": "GET - DEPOIMENTOS  (dois nós) - WAITING_CONFIRMATION",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/waiting_confirmation/<ID1>/<ID2>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"waiting_confirmation",
+								"<ID1>",
+								"<ID2>"
+							]
+						},
+						"description": "Retorna um depoimento pendente entre dois nós juntamente com seu autor\n"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - DEPOIMENTOS - WROTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/wrote/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"wrote",
+								"<ID>"
+							]
+						},
+						"description": "Retorna todos os depoimentos escritos por um nó juntamente com seus destinatários"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - DEPOIMENTO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"area\":\"\",\n\t\"depo\":\"\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/<IDs>/<IDr>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"<IDs>",
+								"<IDr>"
+							]
+						},
+						"description": "Cria um depoimento escito pelo usuário 1 para  o usuário 2.\nO usuáio 1 cria uma relação WROTE para o depoimento e o depoimento tem uma relação WAITING_CONFIRMATION para o nó destinatário"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - DEPOIMENTO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/<IDu>/<IDd>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"<IDu>",
+								"<IDd>"
+							]
+						},
+						"description": "Ataliza uma relação do tipo WAITING_CONFIRMATION para uma relação HAS_DEPO.\n\nRetorna o Depoimento, o destinatário e a relação entre eles"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - DEPOIMENTO - HAS_DEPO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/has_depo/<ID>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"has_depo",
+								"<ID>"
+							]
+						},
+						"description": "Deleta todos os depoimentos que um usuário tem, juntamente com as relações do depoimento\n"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - DEPOIMENTO ( específico) - HAS_DEPO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/has_depo/<IDu>/<IDd>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"has_depo",
+								"<IDu>",
+								"<IDd>"
+							]
+						},
+						"description": "Deleta um depoimento específico\n"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE -DEPOIMENTO - WAITING CONFIRMATION",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/waiting_confirmation/<IDu>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"waiting_confirmation",
+								"<IDu>"
+							]
+						},
+						"description": "Detela todos os depoimentos que estão aguardando aprovação de um usuário juntamente com as ligações do depoimento"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - DEPOIMENTO (específico) - WAITING CONFIRMATION",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/waiting_confirmation/<IDu>/<IDd>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"waiting_confirmation",
+								"<IDu>",
+								"<IDd>"
+							]
+						},
+						"description": "Deleta um depoimento específico que possui relação WAITING_CONFIRMATION juntamente com as suas ligações\n"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - DEPOIMENTO - WROTE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/wrote/<IDu>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"wrote",
+								"<IDu>"
+							]
+						},
+						"description": "Deleta todos os depoimentos escritos por um usuário juntamente com as ligaões dos depoimentos"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - DEPOIMENTO (específico) - WROTE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/depoimento/wrote/<IDu>/<IDd>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"depoimento",
+								"wrote",
+								"<IDu>",
+								"<IDd>"
+							]
+						},
+						"description": "Deleta um depoimento específico escrito por uma pessoa juntamente com as ligações do depoimento"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Groups",
+			"description": "",
+			"item": [
+				{
+					"name": "POST - GROUP ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\":\"\",\n\t\"descricao\":\"\",\n\t\"area\":\"\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/<idC>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"<idC>"
+							]
+						},
+						"description": "Cria um grupo ligado ao seu criador\n"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - GROUP - invite to a group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/invite/<idG>/<idI>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"invite",
+								"<idG>",
+								"<idI>"
+							]
+						},
+						"description": "Convida um usuário para um grupo"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - GROUP - aceita o convite",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/invite/<idG>/<idU>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"invite",
+								"<idG>",
+								"<idU>"
+							]
+						},
+						"description": "Aceita o convite de um grupo"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - GROUP - pedir para participar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/ask_membership/<idG>/<idU>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"ask_membership",
+								"<idG>",
+								"<idU>"
+							]
+						},
+						"description": "Cria uma relação ASKED_MEMBERSHIP com um grupo"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - GROUP - aceitar uma solcitação de participação",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/ask_membership/<idG>/<idU>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"ask_membership",
+								"<idG>",
+								"<idU>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - GROUP - pega todos os grupos que o usuário é membro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/groups/<idU>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"<idU>"
+							]
+						},
+						"description": "Retorna todos os grupos que o usuário é membro"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - GROUP - retorna todos os membros de um grupo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:3003/API/groups/members/<idG>",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"members",
+								"<idG>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - GROUP - retorna todos os pedidos de participação",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/ask_membership/<idG>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"ask_membership",
+								"<idG>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET - GROUP - retorna todos os convites feitos a um usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/invite/<idU>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"invite",
+								"<idU>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - GROUP - desliga um usuário do grupo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/<idG>/<idU>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"<idG>",
+								"<idU>"
+							]
+						},
+						"description": "Tanto para recusar um convite, negar um pedido de participaçao ou deixar de fazer parte do grupo\n"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - GROUP - deleta um grupo do banco",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3003/API/groups/<idG>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"API",
+								"groups",
+								"<idG>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

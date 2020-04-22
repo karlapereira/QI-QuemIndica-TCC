@@ -1,0 +1,9 @@
+input[type='file'] {
+    display: none
+  }
+  
+  label{
+    display: block;
+      text-align: center;
+  }
+  

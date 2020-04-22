@@ -1,0 +1,72 @@
+<div class="login-box">
+  <div class="login-logo">
+      <a><b>Quem Indica <i class="fa fa-question"></i></b></a>
+  </div>
+  
+  <div class="login-box-body">
+    <div class="login-logo">
+      Cadastre-se
+    </div>
+
+    <div class="box-body box-profile">
+      <img *ngIf="user_img !== ''"class="profile-user-img img-responsive img-circle" src="{{user_img}}" alt="User profile picture">
+      <label for='selecao-arquivo'><p  class="text-muted text-center"><i class = "fa fa-camera"></i> Selecionar foto de perfil</p></label>
+      <input id='selecao-arquivo' type='file'  accept="image/*" (change)="changeListener($event)">
+    </div>
+    
+    <form #form="ngForm" novalidate>
+      <div class="form-group has-feedback" [class.has-success] = "nome.valid && (nome.dirty || nome.touched)" [class.has-error] = "!nome.valid && (nome.dirty || nome.touched)">
+        <input type="text" name="nome" #nome="ngModel" ngModel required class="form-control" placeholder="Nome Completo">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <span class= "help-block" *ngIf="!nome.valid && (nome.dirty || nome.touched)"> <i class="fa fa-remove"></i> Ops</span>
+        <span class= "help-block" *ngIf="nome.valid && (nome.dirty || nome.touched)"> <i class="fa fa-check"></i> Ok</span>
+      </div>
+
+      <div class="form-group has-feedback" [class.has-success] = "profissao.valid && (profissao.dirty || profissao.touched)" [class.has-error] = "!profissao.valid && (profissao.dirty || profissao.touched)">
+        <input type="text" name="profissao" #profissao="ngModel" ngModel required class="form-control" placeholder="Profissão">
+        <span class="glyphicon glyphicon-briefcase form-control-feedback"></span>
+        <span class= "help-block" *ngIf="!profissao.valid && (profissao.dirty || profissao.touched)"> <i class="fa fa-remove"></i> Ops</span>
+        <span class= "help-block" *ngIf="profissao.valid && (profissao.dirty || profissao.touched)"> <i class="fa fa-check"></i> Ok</span>
+      </div>
+
+      <div class="form-group has-feedback" [class.has-success] = "local.valid && (local.dirty || local.touched)" [class.has-error] = "!local.valid && (local.dirty || local.touched)">
+        <input type="text" name="local" #local="ngModel" ngModel required class="form-control" placeholder="Local">
+        <span class="glyphicon glyphicon-map-marker form-control-feedback"></span>
+        <span class= "help-block" *ngIf="!local.valid && (local.dirty || local.touched)"> <i class="fa fa-remove"></i> Ops</span>
+        <span class= "help-block" *ngIf="local.valid && (local.dirty || local.touched)"> <i class="fa fa-check"></i> Ok</span>
+      </div>
+
+      <div class="form-group has-feedback" [class.has-success] = "email.valid && (email.dirty || email.touched)" [class.has-error] = "!email.valid && (email.dirty || email.touched)">
+        <input type="email" name="email" #email="ngModel" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="Email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <span class= "help-block" *ngIf="!email.valid && (email.dirty || email.touched)"> <i class="fa fa-remove"></i> Ops</span>
+        <span class= "help-block" *ngIf="email.valid && (email.dirty || email.touched)"> <i class="fa fa-check"></i> Ok</span>
+      </div>
+
+      <div class="form-group has-feedback" [class.has-success] = "senha.valid && (senha.dirty || senha.touched)" [class.has-error] = "!senha.valid && (senha.dirty || senha.touched)">
+        <input type="password" name="senha" #senha="ngModel" ngModel required minlength = "8" class="form-control" placeholder="Senha">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class= "help-block" *ngIf="!senha.valid && (senha.dirty || senha.touched)"> <i class="fa fa-remove"></i> Ops</span>
+        <span class= "help-block" *ngIf="senha.valid && (senha.dirty || senha.touched)"> <i class="fa fa-check"></i> Ok</span>
+      </div>
+
+      <div class="form-group has-feedback" [class.has-success] = "resenha.valid && (resenha.dirty || resenha.touched)" [class.has-error] = "!resenha.valid && (resenha.dirty || resenha.touched)">
+        <input type="password" name="resenha" #resenha="ngModel" ngModel required minlength = "8" class="form-control" placeholder="Repita a sua senha">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class= "help-block" *ngIf="form.value.senha !== form.value.resenha"> <i class="fa fa-remove"></i> As senhas não são iguais</span>
+        <span class= "help-block" *ngIf="!resenha.valid && (resenha.dirty || resenha.touched)"> <i class="fa fa-remove"></i> Ops</span>
+        <span class= "help-block" *ngIf="resenha.valid && (resenha.dirty || resenha.touched)"> <i class="fa fa-check"></i> Ok</span>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button [disabled]="isButtonDisabled(form, form.value.senha,form.value.resenha)"(click)="cadastrar(form.value)" type="submit" class="btn btn-primary btn-block btn-flat">Cadastrar-se</button>
+        </div>
+        
+      </div>
+    </form>
+    <hr>
+    <a class="text-center" [routerLink]="['']">Já tem conta? Entre aqui</a><br>
+
+  </div>
+</div>

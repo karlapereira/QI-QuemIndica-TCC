@@ -1,0 +1,97 @@
+<section class="content" style="height: auto;">
+  <div class = "row">
+    <div class="col-md-12">
+      <div class = "box box-solid">
+        <div class = "box-header with-border">
+          <h2 class="box-title"><b>Amigos</b></h2>
+        </div>
+        <div class = "box-body">
+          <div class= "row">
+            <div *ngFor="let amigo of amigos;" class= "col-md-4">
+              <div class="post">
+                <div class="user-block">
+                  <img class="img-circle img-bordered-sm" src="{{amigo.node.properties.foto}}" alt="User Image">
+                    <span class="username">
+                      <a (click)="verPerfil(amigo.node._id)">{{amigo.node.properties.nome}}</a>
+                    </span>
+                    <span class="description">{{amigo.rel.properties.since}}</span>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+          </div>
+          <button *ngIf="showGetMoreFriends()" (click)="getMoreFriends()" class="btn btn-primary"><b>Ver mais</b></button>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <div class = "row">
+    <div class="col-md-6">
+      <div class = "box box-solid">
+        <div class = "box-header with-border">
+            <h2 class="box-title"><b>Pediram sua amizade</b></h2>
+        </div>
+        <div class = "box-body">
+          <div class= "row">
+            <div *ngFor="let pendente of pendentes;" class= "col-md-12">
+              <div class="post">
+                <div class="user-block">
+                  <img class="img-circle img-bordered-sm" src="{{pendente.node.properties.foto}}" alt="User Image">
+                  <span class="username">
+                    <a (click)="verPerfil(pendente.node._id)">{{pendente.node.properties.nome}}</a>
+                  </span>
+                  <span class="description">{{pendente.rel.properties.date}}</span>
+                  <br>
+                  <div class = "row">
+                    <div class="col-md-6">
+                      <button  (click)="acceptSolicitation(pendente)" class="btn btn-block btn-primary"><b>Aceitar</b></button>
+                    </div>
+                    <div class="col-md-6">
+                        <button  (click)="refuseSolicitation(pendente)" class="btn btn-block btn-danger"><b>Recusar</b></button>
+                      </div>
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <button *ngIf="showGetMoreSolicitationSent()" (click)="getMoreSolicitationsRecieved()" class="btn btn-primary"><b>Ver mais</b></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class = "box box-solid">
+          <div class = "box-header with-border">
+              <h2 class="box-title"><b>Você pediu a amizade</b></h2>
+          </div>
+          <div class = "box-body">
+            <div class= "row">
+              <div *ngFor="let pedido of pedidos;" class= "col-md-12">
+                <div class="post">
+                  <div class="user-block">
+                    <img class="img-circle img-bordered-sm" src="{{pedido.node.properties.foto}}" alt="User Image">
+                    <span class="username">
+                      <a (click)="verPerfil(pedido.node._id)">{{pedido.node.properties.nome}}</a>
+                    </span>
+                    <span class="description">{{pedido.rel.properties.date}}</span>
+                    <br>
+                    <div class = "row">
+                      <div class="col-md-12">
+                        <button  (click)="cancelSolicitation(pedido)" class="btn btn-block btn-default"><b>Cancelar Solicitação</b></button>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+            </div>
+            <button *ngIf="showGetMoreSolicitationsRecieved()" (click)="getMoreSolicitationSent()" class="btn btn-primary"><b>Ver mais</b></button>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+</section>
